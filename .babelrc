@@ -1,0 +1,10 @@
+{
+  "presets": [["es2015", { "modules": false }], "react"],
+  "plugins" : [
+    ["transform-es2015-classes",{ "loose": true}],
+    "transform-object-rest-spread",
+    "transform-proto-to-assign",
+    "system-import-transformer",
+    "react-hot-loader/babel"
+  ]
+}

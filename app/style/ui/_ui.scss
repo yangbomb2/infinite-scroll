@@ -1,0 +1,100 @@
+/**
+* UI
+*
+* @author <min>
+*/
+
+//btns
+.ui-btn {
+  outline: none;
+  display: inline-block;
+  position: relative;
+
+  &,
+  &:hover,
+  &:visited,
+  &:active {
+    text-decoration: none;
+  }
+
+  .material-icons{
+    font-weight: 600;
+  }
+
+  //custom icons + google m icons
+  [class*="icon-"],
+  .material-icons{
+    display: inline-block;
+    color: $color-white;
+  }
+
+  &.disabled {
+    [class*="icon-"],
+    .material-icons{
+      opacity: .5;
+    }
+  }
+
+  &.active{
+    [class*="icon-"],
+    .material-icons{
+    }
+  }
+}
+
+.ui-btn--box{
+  background: $color-white;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: $color-black;
+}
+
+.ui-btn--dark{
+  &,
+  [class*="icon-"],
+  .material-icons{
+    color: $color-gray;
+  }
+}
+
+//hamburger
+.ui-btn.hamburger{
+  position: relative;
+  width: 18px;
+  height: 12px;
+  overflow: hidden;
+
+  .bar{
+    width: 18px;
+    height: 2px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: $color-white;
+  }
+
+  &:before,
+  &:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 18px;
+    height: 2px;
+
+    background-color: $color-white;
+    z-index: 2;
+
+    will-change: transform;
+    transform-origin: 50%;
+    transition: $transition;
+  }
+
+  &:before{
+    top: 5px;
+  }
+
+  &:after{
+    top: 10px;
+  }
+}

@@ -1,0 +1,22 @@
+/**
+* Main project stylesheet combiner
+*
+* @section Setup
+* @author <min>
+*/
+// ---------------------------------------------------------------------------
+// Fonts
+
+// ---------------------------------------------------------------------------
+// Framework
+@import 'base';
+
+@import 'framework/framework';
+@import 'framework/normalize';
+
+// Default typography for the site
+@import 'framework/typography';
+@import 'ui/ui';
+
+// Modules
+@import 'generic';

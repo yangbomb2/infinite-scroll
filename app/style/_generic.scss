@@ -1,0 +1,32 @@
+/**
+* Generic stuff
+*
+* @section framework
+* @author min
+*/
+
+@import './base';
+
+body{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: $font-stack-regular;
+  background-color: $color-light-gray;
+}
+
+.loading {
+  @extend %no-scroll;
+  pointer-events: none;
+  filter: grayscale(100%);
+  opacity: .5;
+
+  .loading-bar {
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  .cards{
+  }
+}
+
+main {}

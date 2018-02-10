@@ -1,0 +1,22 @@
+/**
+* Root component
+*
+* @section Components
+* @author min
+*/
+
+@import '../base';
+
+.root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+	//when side bar is open
+	&.sidebar-open  {
+	}
+}

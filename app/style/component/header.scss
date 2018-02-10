@@ -1,0 +1,177 @@
+/**
+* Header + nav
+*
+* @section Components
+* @author min
+*/
+
+@import '../base';
+
+$status-bar-height: 30px;
+
+.header{
+	position: fixed;
+	width: 100%;
+	height: auto;
+	z-index: $header-index;
+	background-color: #333;
+  will-change: transform;
+	transition: $transition;
+	box-shadow: $header-shadow;
+
+	&--sm {
+		.header__status-bar{
+			height: 0;
+
+			.icons{
+				transform: translateY(30px);
+			}
+		}
+	}
+}
+
+.header__status-bar{
+	width: 100%;
+	height: $status-bar-height;
+	will-change: height;
+	transform-origin: 50% 0;
+	transition: $transition;
+	z-index: 3;
+	position: relative;
+
+	.icons {
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		padding: 0 $default-gutter;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		will-change: height;
+		transition: $transition;
+	}
+
+	.ui-btn,
+	.time {
+		margin-left: 12px;
+
+		&:first-child{
+			margin-left: 0;
+		}
+	}
+
+	.material-icons {
+		color: white;
+		font-size: 15px;
+	}
+
+	.time{
+    font-size: 10px;
+    color: $color-white;
+	}
+}
+
+.header__nav {
+	height: $header-height - $status-bar-height;
+	padding: 10px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	z-index: 2;
+	position: relative;
+
+	h2{
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 1.1em;
+		padding: 0;
+		margin :0;
+		color: $color-white;
+	}
+
+	.ui-btn + h2 {
+		margin-left: 35px;
+	}
+}
+
+.header__nav-tool {
+  background-color: $color-white;
+  transform: translateY(0);
+  transition: $transition;
+	z-index: 1;
+}
+
+.header--show-tool{
+	.header__nav-tool{
+	  transform: translateY(100%);
+	}
+}
+
+.removal-card {
+	display: flex;
+	align-items: center;
+	width: 200px;
+	height: 48px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  background-color: white;
+	box-shadow: -2px 3px 5px 0px rgba(119, 119, 119, 0.19);
+
+	span{
+		@extend %sub-title;
+		flex: 1 0 auto;
+		padding: 0 $default-gutter;
+	}
+
+	//undo btn
+	.ui-btn.undo {
+		flex: 0 0 48px;
+
+		font-size: 10px;
+		color: $color-gray;
+		width: 48px;
+		height: 48px;
+
+		text-align: center;
+		line-height: 48px;
+
+		.material-icons {
+			pointer-events: none;
+			width: 100%;
+			height: 100%;
+			background-color: $color-blue;
+			text-align: center;
+			line-height: 48px;
+			color: white;
+			font-size: 16px;
+		}
+	}
+}
+.removal-card.lastest {}
+
+.removal-card.lastest ~ .removal-card {}
+
+//transition
+.removal-enter {
+	opacity: 0;
+	right: -10px;
+}
+
+.removal-enter-active {
+	opacity: 1;
+	right: 0;
+	transition: all 500ms;
+}
+
+.removal-leave {
+	opacity: 1;
+}
+
+.removal-leave-active {
+	opacity: 0;
+	right: -10px;
+	transition: all 500ms;
+}

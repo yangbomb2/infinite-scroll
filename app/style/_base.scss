@@ -1,0 +1,65 @@
+/**
+* Base variables and function definitions
+*/
+
+// ---------------------------------------------------------------------------
+// Base variables
+
+$base-font-size: 10px;
+$base-line-height: 1.231em;
+
+// ---------------------------------------------------------------------------
+// Breakpoints (default is same as Bootstrap 3)
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop-small: 992px;
+$bp-desktop-large: 1200px;
+
+
+$header-height: 60px;
+$sidebar-width: 100%;
+
+$header-index: 10;
+$sidebar-index: 11;
+$cards-index: 0;
+
+$default-gutter: 15px;
+
+$transition: all 400ms cubic-bezier(.33,.02,0,.98);
+$transition-no-easing: all 260ms;
+$header-shadow : 0 3px 12px -2px #777;
+
+// ---------------------------------------------------------------------------
+// Colors
+
+// Generics
+$color-red: rgb(208, 37, 44);
+$color-blue: rgb(2, 168, 243);
+$color-dark-blue: rgb(0, 143, 208);
+$color-white: rgb(255, 255, 255);
+$color-gray: rgb(51, 51, 51);
+$color-light-gray: rgb(238, 238, 238);
+$color-black: rgb(0, 0, 0);
+
+// UI colors
+$color-purple: rgb(103, 58, 183);
+$color-dark-purple: rgb(82, 46, 146);
+
+// Button colors
+
+// Font colors
+
+//vars
+%no-scroll{
+  position: fixed;
+  overflow: hidden;
+}
+
+%sub-title {
+  font-size: 12px;
+}
+
+// ---------------------------------------------------------------------------
+// Font stack
+$font-stack-regular: 'Roboto', sans-serif;
+$font-stack-header: 'Roboto', sans-serif;
